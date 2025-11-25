@@ -19,7 +19,7 @@ addBtn.addEventListener("click", () => {
   const li = document.createElement("li");
   li.innerHTML = `
     <b>${name}</b>, ${year} г. — ${work}
-    (Пол: <b>${gender}</b>)
+    (уровен: <b>${gender}</b>)
     <span class="delete">×</span>
   `;
 
