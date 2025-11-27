@@ -155,4 +155,13 @@ li {
   background: black;
   border: none;
   color: white;
-} 
+} .edit {
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  float: right;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 1.5px 0 0 0;
+  color: rgb(0, 0, 0);
+}
