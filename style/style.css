@@ -50,8 +50,8 @@ select {
   border: 1px solid #ccc;
   font-size: 16px;
 }
-button {
-  width: 100%;
+#addBtn {
+  width: 96.6%;
   padding: 12px;
   margin-top: 10px;
   border: none;
@@ -135,3 +135,24 @@ li {
     background-position: 0% 50%;
   }
 }
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0 0 0;
+  width: 96.6%;
+} .btn {
+  border-radius: 16px;
+  height: 25px;
+  width: 20%;
+  border: 1.5px dashed black;
+  background-color: transparent;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s;
+} .btn:hover {
+  background: black;
+  border: none;
+  color: white;
+} 
