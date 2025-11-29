@@ -9,7 +9,12 @@ const all = document.getElementById("all");
 const esey = document.getElementById("esey");
 const medium = document.getElementById("medium");
 const hard = document.getElementById("hard");
+const night = document.getElementById("icon");
+const body = document.getElementById("body");
 
+let box = document.getElementById("box-1");
+let box1 = document.getElementById("box-2");
+let box2 = document.getElementById("box-3");
 addBtn.addEventListener("click", () => {
   let name = nameInput.value.trim();
   let year = yearInput.value.trim();
@@ -97,3 +102,69 @@ all.addEventListener("click", () => filterList("all"));
 esey.addEventListener("click", () => filterList("esey"));
 medium.addEventListener("click", () => filterList("medium"));
 hard.addEventListener("click", () => filterList("hard"));
+
+night.addEventListener("click", (e) => {
+  body.style.background = "black";
+  night.style.display = "none";
+  light.style.display = "block";
+});
+night.addEventListener("click", (e) => {
+  body.style.animation = "back 15s ease infinite";
+});
+let reg = /^[a-zA-Zа-яА-Я]+$/;
+let reg1 = /^[0-9]+$/;
+let reg2 = /^[a-zA-Zа-яА-Я0-9]+$/;
+nameInput.addEventListener("input", () => {
+  if (nameInput.value == "") {
+    box.innerHTML = `
+    не заполненое строка
+    `;
+    box.style.color = "red";
+  } else if (!reg.test(nameInput.value)) {
+    box.innerHTML = `
+    не правилное имя
+    `;
+    box.style.color = "red";
+  } else if (reg.test(nameInput.value)) {
+    box.innerHTML = `
+    правилно
+    `;
+    box.style.color = "green";
+  }
+});
+yearInput.addEventListener("input", () => {
+  if (yearInput.value == "") {
+    box1.innerHTML = `
+    не заполненое строка
+    `;
+    box1.style.color = "red";
+  } else if (!reg1.test(yearInput.value)) {
+    box1.innerHTML = `
+    не правильное дата
+    `;
+    box1.style.color = "red";
+  } else {
+    box1.innerHTML = `
+    правильно
+    `;
+    box1.style.color = "green";
+  }
+});
+workInput.addEventListener("input", () => {
+  if (workInput.value == "") {
+    box2.innerHTML = `
+    не заполненое строка
+    `;
+    box2.style.color = "red";
+  } else if (!reg2.test(workInput.value)) {
+    box2.innerHTML = `
+    не правилно
+    `;
+    box2.style.color = "red";
+  } else if (reg2.test(workInput.vale)) {
+    box2.innerHTML = `
+    правилно
+    `;
+    box2.style.color = "green";
+  }
+});
